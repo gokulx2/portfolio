@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gokul-Portfolio</title>
     <style>
-        /* Style to make the image scrollable */
+        /* General Reset */
         body, html {
             margin: 0;
             padding: 0;
             width: 100vw;
             height: 100vh;
-            overflow-y: scroll; /* Enable vertical scrolling */
+            overflow: hidden; /* Prevent extra scrolling */
             display: flex;
             justify-content: center;
-            align-items: start;
+            align-items: center; /* Center the image vertically and horizontally */
+            background-color: #f0f0f0; /* Optional: to provide a background color */
         }
         /* Ensure the image takes full width and adjusts height proportionally */
         .full-image {
-            width: 100%; /* Full viewport width */
+            width: 100%;
             height: auto; /* Automatic height to maintain aspect ratio */
+            object-fit: cover; /* Optional: Ensures the image fills the screen without distortion */
         }
     </style>
 </head>
@@ -29,7 +31,7 @@
     <!-- Disable Right-Click and Context Menu -->
     <script>
         document.addEventListener("contextmenu", (event) => {
-            event.preventDefault();
+            event.preventDefault(); // Prevent right-click menu
         });
     </script>
 </body>
