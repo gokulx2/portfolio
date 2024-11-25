@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gokul-Portfolio</title>
+    <style>
+        /* Style to make the image scrollable */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll; /* Enable vertical scrolling */
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+        /* Ensure the image takes full width and adjusts height proportionally */
+        .full-image {
+            width: 100%; /* Full viewport width */
+            height: auto; /* Automatic height to maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <img src="portfolio/Main.jpg" alt="Full Image" class="full-image">
+
+    <!-- Disable Right-Click and Context Menu -->
+    <script>
+        document.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
