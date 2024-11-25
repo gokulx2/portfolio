@@ -3,36 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gokul-Portfolio</title>
+    <title>Portfolio Image</title>
     <style>
-        /* General Reset */
+        /* Set the body and html to fill the screen and prevent overflow */
         body, html {
             margin: 0;
             padding: 0;
-            width: 100vw;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Create a scrollable container for the image */
+        .image-container {
             height: 100vh;
-            overflow: hidden; /* Prevent extra scrolling */
+            width: 100%;
+            overflow: auto;
             display: flex;
             justify-content: center;
-            align-items: center; /* Center the image vertically and horizontally */
-            background-color: #f0f0f0; /* Optional: to provide a background color */
+            align-items: center;
         }
-        /* Ensure the image takes full width and adjusts height proportionally */
-        .full-image {
-            width: 100%;
-            height: auto; /* Automatic height to maintain aspect ratio */
-            object-fit: cover; /* Optional: Ensures the image fills the screen without distortion */
+
+        /* Make the image large and allow scrolling */
+        .scrollable-image {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
-    <img src="portfolio/Main.jpg" alt="Full Image" class="full-image">
 
-    <!-- Disable Right-Click and Context Menu -->
-    <script>
-        document.addEventListener("contextmenu", (event) => {
-            event.preventDefault(); // Prevent right-click menu
-        });
-    </script>
+<div class="image-container">
+    <img src="portfolio/Main.jpg" alt="Portfolio Image" class="scrollable-image">
+</div>
+
+<!-- Disable Right-Click and Context Menu -->
+<script>
+    document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+    });
+</script>
+
 </body>
 </html>
